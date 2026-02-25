@@ -208,6 +208,6 @@ db.Ratings.insertMany([
 
 ])
 
-Console.log("--- Dodano wszystkie rekordy pomyślnie ---")
+console.log("--- Dodano wszystkie rekordy pomyślnie ---")
 
 
