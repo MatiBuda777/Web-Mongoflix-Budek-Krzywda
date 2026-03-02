@@ -1,0 +1,56 @@
+// Ilość wyświetleń filmów każdego reżysera
+db.Movie.aggregate(
+  [
+    {
+      $group: {
+        _id: '$director',
+        totalMoviesViews: { $sum: '$totalViews' }
+      }
+    }
+  ]
+);
+
+
+// Średnia ocen gatunków
+db.getCollection('Movie').aggregate(
+  [
+    {
+      $lookup: {
+        from: 'Ratings',
+        localField: 'ratings_id',
+        foreignField: '_id',
+        as: 'ratings'
+      }
+    },
+    { $unwind: { path: '$genres' } },
+    { $unwind: { path: '$ratings' } },
+    {
+      $group: {
+        _id: '$genres',
+        avgRating: { $avg: '$ratings.rating' }
+      }
+    }
+  ]
+);
+
+
+// Średnia ocen filmów
+db.getCollection('Movie').aggregate(
+  [
+    {
+      $lookup: {
+        from: 'Ratings',
+        localField: 'ratings_id',
+        foreignField: '_id',
+        as: 'ratings'
+      }
+    },
+    { $unwind: { path: '$ratings' } },
+    {
+      $group: {
+        _id: '$title',
+        avgRating: { $avg: '$ratings.rating' }
+      }
+    }
+  ]
+);
