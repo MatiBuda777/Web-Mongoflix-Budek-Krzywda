@@ -10,7 +10,9 @@ db.Movie.insertMany([
     {
         _id: 1,
         title: "stringi",
-        releaseDate: "10-04-2026",
+        releaseYear: 2026,
+        releaseMonth: 4,
+        releaseDay: 10,
         genres: ["horror","drama"],
         director: "mariusz",
         actors: ["tonik_mlody","kamieniusz"],
@@ -21,7 +23,9 @@ db.Movie.insertMany([
     {
         _id: 2,
         title: "alien",
-        releaseDate: "20-08-1997",
+        releaseYear: 1997,
+        releaseMonth: 8,
+        releaseDay: 20,
         genres: ["horror","action","sci-Fi"],
         director: "adam",
         actors: ["alien","ripley"],
@@ -32,7 +36,9 @@ db.Movie.insertMany([
     {
         _id: 3,
         title: "stringi 2: shorty",
-        releaseDate: "26-12-2026",
+        releaseYear: 2026,
+        releaseMonth: 12,
+        releaseDay: 26,
         genres: ["horror","comedy"],
         director: "mateusz",
         actors: ["tonik_stary","rockeusz"],
@@ -43,7 +49,9 @@ db.Movie.insertMany([
     {
         _id: 4,
         title: "Film 2",
-        releaseDate: "15-05-2025",
+        releaseYear: 2025,
+        releaseMonth: 5,
+        releaseDay: 15,
         genres: ["comedy", "family"],
         director: "kowalski",
         actors: ["jan_nowak", "anna_mala"],
@@ -55,7 +63,9 @@ db.Movie.insertMany([
     {
         _id: 5,
         title: "Film 3",
-        releaseDate: "22-11-2024",
+        releaseYear: 2024,
+        releaseMonth: 11,
+        releaseDay: 22,
         genres: ["action", "thriller"],
         director: "nowicki",
         actors: ["piotr_szybki", "adam_woj"],
@@ -65,7 +75,9 @@ db.Movie.insertMany([
     {
         _id: 6,
         title: "Film 4",
-        releaseDate: "01-02-2023",
+        releaseYear: 2023,
+        releaseMonth: 2,
+        releaseDay: 1,
         genres: ["sci-fi", "adventure"],
         director: "zielinski",
         actors: ["ewa_galaktyka", "tomasz_kosmos"],
@@ -76,7 +88,9 @@ db.Movie.insertMany([
     {
         _id: 7,
         title: "Film 5",
-        releaseDate: "07-06-2023",
+        releaseYear: 2023,
+        releaseMonth: 6,
+        releaseDay: 7,
         genres: ["action", "adventure"],
         director: "kaszubski",
         actors: ["piotr_wolny", "anna_mala"],
@@ -87,7 +101,9 @@ db.Movie.insertMany([
     {
         _id: 8,
         title: "Film 6",
-        releaseDate: "22-09-2024",
+        releaseYear: 2024,
+        releaseMonth: 9,
+        releaseDay: 22,
         genres: ["sci-fi", "horror", "comedy"],
         director: "zielinski",
         actors: ["rockeusz", "anna_duza"],
@@ -98,7 +114,9 @@ db.Movie.insertMany([
     {
         _id: 9,
         title: "Film 7",
-        releaseDate: "08-10-2024",
+        releaseYear: 2024,
+        releaseMonth: 10,
+        releaseDay: 8,
         genres: ["sci-fi", "drama"],
         director: "adamski",
         actors: ["adam_woj"],
@@ -109,7 +127,9 @@ db.Movie.insertMany([
     {
         _id: 10,
         title: "Film 8",
-        releaseDate: "01-02-2023",
+        releaseYear: 2023,
+        releaseMonth: 2,
+        releaseDay: 1,
         genres: ["sci-fi", "thriller"],
         director: "polski",
         actors: ["tomasz_kosmos"],
@@ -208,6 +228,6 @@ db.Ratings.insertMany([
 
 ])
 
-Console.log("--- Dodano wszystkie rekordy pomyślnie ---")
+console.log("--- Dodano wszystkie rekordy pomyślnie ---")
 
 
