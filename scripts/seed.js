@@ -1,4 +1,3 @@
-
 db = db.getSiblingDB('Mongoflix');
 
 db.Movie.drop();
@@ -15,5 +14,3 @@ db.Movie.insertMany(movies)
 db.Ratings.insertMany(ratings)
 
 console.log("--- Dodano wszystkie rekordy pomyślnie ---")
-
-

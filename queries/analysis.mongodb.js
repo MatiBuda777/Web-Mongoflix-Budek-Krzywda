@@ -2,14 +2,42 @@ db = db.getSiblingDB('Mongoflix')
 
 print("\n--- RAPORT ANALITYCZNY MONGOFLIX ---")
 
-print("\n\n1. Filmy z gatunku Akcja:")
+print("\n\n1. Filmy z gatunku Horror:")
+const horrorMovies = db.Movie.aggregate([
+    {
+        $lookup: {
+            from: "Ratings",
+            localField: "ratings_id",
+            foreignField: "_id",
+            as: "oceny_id"
+        }
+    },
+    {$unwind: "$oceny_id"},
+    {$match: { genres: "horror"}}
+]).toArray()
+printjson(horrorMovies)
 
 
 print("\n\n2. Filmy ostatnio wydane:")
+const recentMovies = db.Movie.aggregate([  {
+    $match:
+        {
+            releaseYear: {
+                $gt: 2020
+            },
+            releaseMonth: {
+                $gt: 4
+            },
+            releaseDay: {
+                $gt: 5
+            }
+        }
+}]).toArray()
+printjson(recentMovies)
 
 
 print("\n\n3. Wyświetlenia filmów każdego reżysera:")
-const totalDirectorsMoviesViews = db.Movies.aggregate(
+const totalDirectorsMoviesViews = db.Movie.aggregate(
     [
         {
             $group: {
@@ -23,7 +51,7 @@ printjson(totalDirectorsMoviesViews)
 
 
 print("\n\n4. Średnia ocen każdego filmu:")
-const avgMovieRating = db.Movies.aggregate(
+const avgMovieRating = db.Movie.aggregate(
     [
         {
             $lookup: {
@@ -46,7 +74,7 @@ printjson(avgMovieRating)
 
 
 print("\n\n5. Średnia ocen każdego gatunku:")
-const avgGenreRating = db.Movies.aggregate(
+const avgGenreRating = db.Movie.aggregate(
     [
         {
             $lookup: {

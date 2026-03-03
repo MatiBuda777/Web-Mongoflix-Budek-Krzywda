@@ -4,7 +4,7 @@
 Witaj w zespole inżynierskim Mongoflix! 
 Twoim zadaniem jest zaprojektowanie, wdrożenie i przetestowanie struktury bazy danych MongoDB dla nowej platformy streamingowej.
 
-> **Status Projektu:** 🟡 W trakcie realizacji  
+> **Status Projektu:** Zrealizowany  
 > **Stack Technologiczny:** MongoDB, JavaScript (ES6+)
 
 ---
@@ -22,7 +22,7 @@ Twoim zadaniem jest zaprojektowanie, wdrożenie i przetestowanie struktury bazy 
 ---
 
 
-## 📂 Twoje Zadania
+## 📂 Wymagania do Zadania
 
 ### 1. 📐 Modelowanie (`docs/schema.md`)
 W folderze `docs` opisz strukturę dokumentu JSON.
@@ -48,17 +48,8 @@ Napisz skrypt z zapytaniami agregującymi (`db.collection.aggregate([...])`).
 
 ## ⚙️ Instrukcja Uruchomienia (Setup)
 
-**Nie klonuj tego repozytorium bezpośrednio!** Nie będziesz mógł zapisać swojej pracy.
-Aby rozpocząć projekt, wykonaj te kroki:
-
-1.  Spójrz w prawy górny róg tej strony na GitHubie.
-2.  Kliknij zielony przycisk **Use this template** -> **Create a new repository**.
-3.  **Nazwij swoje repozytorium:** `mongoflix-nazwisko1-nazwisko2` (np. `mongoflix-kowalski-nowak`).
-4.  Ustaw widoczność na **Public**.
-5.  Dopiero teraz **sklonuj SWOJE nowe repozytorium** na komputer:
-    ```bash
-    git clone [https://github.com/TWOJ-LOGIN/mongoflix-nazwisko1-nazwisko2.git](https://github.com/TWOJ-LOGIN/mongoflix-nazwisko1-nazwisko2.git)
-    ```
+Odpalasz ten projekt w WebStorm, otwierasz konsolę i wpisujesz komendę `mongosh scripts/seed.js`.
+Ziarno zostaje zasiane w bazie. Aby zobaczyć raport, wpisz do konsoli `mongosh queries/analysis.mongodb.js`
 
 ---
 
@@ -69,7 +60,6 @@ Aby rozpocząć projekt, wykonaj te kroki:
 3.  **Formatowanie:** Kod musi być czytelny. Użyj Prettiera lub innej wtyczki formatującej.
 
 ---
-*Powodzenia, Zespół Mongoflix* 🚀
 
 
 
