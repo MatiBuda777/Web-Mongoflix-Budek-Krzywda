@@ -4,7 +4,7 @@
 Witaj w zespole inżynierskim Mongoflix! 
 Twoim zadaniem jest zaprojektowanie, wdrożenie i przetestowanie struktury bazy danych MongoDB dla nowej platformy streamingowej.
 
-> **Status Projektu:** Zrealizowany  
+> **Status Projektu:** 🟢 Zrealizowany  
 > **Stack Technologiczny:** MongoDB, JavaScript (ES6+)
 
 ---
